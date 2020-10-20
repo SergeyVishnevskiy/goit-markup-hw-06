@@ -355,13 +355,41 @@
                     <use href="./svg/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+            <h2 class="title-form">Оставьте свои данные, мы вам перезвоним</h2>
             <form action="#" class="contact-form">
-                <h2 class="title-form">Оставьте свои данные, мы вам перезвоним</h2>
-                <input type="text" name="user-name" class="contact-form-input" required>
-                <input type="tel" name="user-tel" class="contact-form-input" required>
-                <input type="email" name="user-email" class="contact-form-input" required>
-                <textarea name="user-message" class="contact-form-message" placeholder="Введите текст"></textarea>
-                <button type="submit" class="contact-form-button">Отправить</button>
+                <div class="contact-form-field">
+                    <p class="contact-form-title">Имя</p>
+                    <input type="text" name="user-name" id="user-name" class="contact-form-input" required minlength="2"> 
+                    <svg class="contact-form-svg" width="12" height="12" >
+                        <use href="./svg/sprite.svg#icon-name-svg"></use>
+                    </svg>
+                </div>
+                <div class="contact-form-field">
+                    <p class="contact-form-title">Телефон</p>
+                    <input type="tel" name="user-tel" id="user-tel" class="contact-form-input" required minlength="10">
+                    <svg class="contact-form-svg" width="13" height="13" >
+                        <use href="./svg/sprite.svg#icon-tel-svg"></use>
+                    </svg>
+                </div>
+                <div class="contact-form-field">
+                    <p class="contact-form-title">Почта</p>
+                    <input type="email" name="user-email" id="user-email" class="contact-form-input" required>
+                    <svg class="contact-form-svg" width="15" height="12" >
+                        <use href="./svg/sprite.svg#icon-email-svg"></use>
+                    </svg>
+                </div>
+                <div class="contact-form-field">
+                    <p class="contact-form-title">Комментарий</p>
+                    <textarea name="user-message" id="user-message" class="contact-form-message" placeholder="Введите текст" minlength="15"></textarea>
+                </div>
+                    <input type="checkbox" name="user-policy" id="user-policy" class="modal-checkbox visually-hidden">
+                    <label for="user-policy" class="for-modal-checkbox">
+                        <span class="label-title">Соглашаюсь с рассылкой и принимаю <a href="#" class="policy-link">Условия договора</a></span>
+                    </label>
+                 <div class="button-box">
+                     <button type="submit" class="contact-form-button">Отправить</button>
+                </div>
+        
 
             </form>
         </div>
